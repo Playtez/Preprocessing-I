@@ -139,9 +139,40 @@ body {
   width: 80%;
   margin: 0 auto;
 }
+@media (max-width: 500px) {
+  html,
+  body {
+    width: 100%;
+  }
+}
 .container {
   font-size: 1.6rem;
   background-color: none;
+}
+@media (max-width: 500px) {
+  .container nav {
+    margin: 0 auto;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: none;
+  }
+  .container nav a {
+    text-align: center;
+    font-size: 2rem;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    padding: 2%;
+    margin-top: 2%;
+    margin-bottom: 3%;
+  }
+  .container nav a:hover {
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px grey;
+    color: black;
+  }
 }
 .container nav {
   margin: 0 auto;
@@ -206,6 +237,39 @@ section.a .top-img2 {
   height: 100%;
   opacity: 0.6;
 }
+@media (max-width: 500px) {
+  section.a {
+    display: flex;
+    flex-direction: column;
+    padding: 0%;
+  }
+  section.a .intro-section {
+    justify-content: space-evenly;
+  }
+  section.a .div1 {
+    width: 50%;
+    padding: 4%;
+    flex: 1;
+  }
+  section.a .div2 {
+    width: 99%;
+    flex: 1;
+    padding: 4%;
+    color: white;
+  }
+  section.a .top-img {
+    background-color: grey;
+    max-width: 200%;
+  }
+  section.a .top-img2 {
+    opacity: 10;
+    background-color: black;
+    max-width: 200%;
+    padding: 14%;
+    height: 100%;
+    opacity: 0.6;
+  }
+}
 main.container {
   width: 100%;
 }
@@ -215,10 +279,18 @@ main.container div.space {
   width: 100%;
   background-color: white;
 }
+@media (max-width: 500px) {
+  flex-direction: column;
+}
 section.b {
   padding: 4%;
   margin: 1%;
   display: flex;
+}
+@media (max-width: 500px) {
+  section.b {
+    flex-direction: column;
+  }
 }
 section.b #smaller-border {
   height: 0.125rem;
@@ -254,7 +326,7 @@ section.c {
   background-color: black;
   max-width: 100%;
   opacity: 0.6;
-  height: 15%;
+  height: 20%;
 }
 section.c div {
   display: flex;
@@ -271,4 +343,10 @@ section.c div h1 {
 .center {
   display: flex;
   flex-direction: column;
+  width: 0 auto;
+}
+@media (max-width: 500px) {
+  .center {
+    width: auto;
+  }
 }

@@ -149,6 +149,9 @@ body {
   max-width: 90%;
   width: 80%;
   margin: 0 auto;
+  @media (max-width: 500px) {
+    width: 100%;
+  }
 }
 main.container {
 }
@@ -157,11 +160,37 @@ main.container {
   font-size: 1.6rem;
   background-color: none;
 
+  @media (max-width: 500px) {
+    nav {
+      margin: 0 auto;
+      width: 60%;
+      .display();
+      flex-direction: column;
+      .txt();
+      background-color: none;
+
+      a {
+        .txt();
+        font-size: 2rem;
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: none;
+        padding: 2%;
+        margin-top: 2%;
+        margin-bottom: 3%;
+      }
+      a:hover {
+        border-radius: 10px;
+        //   opacity: 0.3;
+        box-shadow: 10px 10px 5px grey;
+        color: black;
+      } // end of a
+    } // end of nav
+  }
   nav {
     margin: 0 auto;
     width: 60%;
     .display();
-
     .txt();
     justify-content: space-between;
     background-color: none;
@@ -200,7 +229,6 @@ h1.my-resume {
 // start of section a
 section.a {
   .display();
-
   padding: 0%;
 
   .intro-section {
@@ -233,7 +261,47 @@ section.a {
     height: 100%;
     opacity: 0.6;
   }
-} //end of section
+}
+@media (max-width: 500px) {
+  section.a {
+    .display();
+    flex-direction: column;
+    padding: 0%;
+
+    .intro-section {
+      justify-content: space-evenly;
+    } // end of .intro-section
+
+    .div1 {
+      width: 50%;
+      padding: 4%;
+      // border: 10px solid blue;
+      flex: 1;
+    }
+
+    .div2 {
+      width: 99%;
+      // border: 10px solid lightcoral;
+      flex: 1;
+      padding: 4%;
+      color: white;
+    }
+    .top-img {
+      background-color: grey;
+      max-width: 200%;
+    }
+    .top-img2 {
+      opacity: 10;
+      background-color: black;
+      max-width: 200%;
+      padding: 14%;
+      height: 100%;
+      opacity: 0.6;
+    }
+  }
+}
+
+//end of section
 main.container {
   width: 100%;
 
@@ -245,12 +313,17 @@ main.container {
   }
 }
 //start of section b
+@media (max-width: 500px) {
+  flex-direction: column;
+}
+
 section.b {
-  //   border: 10px dashed olive;
   padding: 4%;
   margin: 1%;
-
   .display();
+  @media (max-width: 500px) {
+    flex-direction: column;
+  }
 
   #smaller-border {
     height: 0.125rem;
@@ -296,7 +369,7 @@ section.c {
   background-color: black;
   max-width: 100%;
   opacity: 0.6;
-  height: 15%;
+  height: 20%;
 
   div {
     .display();
@@ -318,4 +391,8 @@ section.c {
 .center {
   .display();
   flex-direction: column;
+  width: 0 auto;
+  @media (max-width: 500px) {
+    width: auto;
+  }
 }
